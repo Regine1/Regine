@@ -15,13 +15,14 @@ int ch;
  
     do {
     	cout<<"\n\t\t<<< Program of operations >>>";
-    	cout<<"\n\n1.\tAddition\n2.\tSubtraction\n3.\tMultiplication\n4.\tDivision\n5.\tModulus\n6.\tExit\n"
-	    cin>>ch;
+    	cout<<"\n\n1.\tAddition\n2.\tSubtraction\n3.\tMultiplication\n4.\tDivision\n5.\tModulus\n6.\tExit\n";
+	    cout<<"\nEnter your choice: ";
+		cin>>ch;
 	    
-	    swicth(ch){
+	    switch(ch){
 	    	case 1:
 	    		add();
-	    		break;|
+	    		break;
 	    	case 2:
 	    		sub();
 	    		break;
@@ -34,7 +35,7 @@ int ch;
 	    	case 5:
 	    		mod();
 	    		break;
-	    	csae 6:
+	    	case 6:
 	    		return 0;
 	    	default :
 	    		cout<<"\n\nInvalid input. Please try again.\n";
@@ -69,4 +70,11 @@ void div(){
 	cin>>num1>>num2;
 	ans = (float)num1 / num2;
 	cout<<"\nQuotient is "<<ans<<"\n";
-}
+} 
+
+void mod(){
+	cout<<"\nEnter two numbers for modulus: ";
+	cin>>num1>>num2;
+	ans = num1 % num2;
+	cout<<"\nRemainder is "<<ans<<"\n";
+} 
